@@ -1,11 +1,17 @@
 import './App.css';
 import React from 'react';
+import Menu from '../components/layout/Menu'
+import Content from '../components/layout/Content';
+import { BrowserRouter } from 'react-router-dom';
 
 
 const App = props => {
-    return(
+    return (
         <div className='App'>
-            <h1>App</h1>
+            <BrowserRouter>
+                <Menu />
+                <Content />
+            </BrowserRouter>
         </div>
     )
 }
