@@ -1,9 +1,11 @@
 import React from "react";
+import PageTitle from "../../components/layout/PageTitle";
 
 const NotFound = props =>(
     <div>
-        <h1>Página não encontrada</h1>
-        <h2>erro 404!!!</h2>
+       <PageTitle error
+            title="404"
+            subtitle="Opss... Página Não Encontrada!"/>
     </div>
 )
 

@@ -1,8 +1,12 @@
 import React from "react";
+import PageTitle from "../../components/layout/PageTitle";
 
 const Home = props =>(
     <div className="Home">
-        <h1>Home</h1>
+        <PageTitle
+            title="Módulo Hooks"
+            subtitle="Hooks são uma nova adição ao React"
+        />
     </div>
 )
 
