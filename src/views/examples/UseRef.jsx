@@ -19,6 +19,12 @@ const merge = function (s1, s2) {
     return resultado;
 }
 
+const merge2 = function(s1,s2){
+    return [...s1].map(function(e,i){
+        return `${e}${s2[i] || ""}`
+    }).join("")
+}
+
 const UseRef = (props) => {
     const [value1, setValue1] = useState("")
     const [value2, setValue2] = useState("")
