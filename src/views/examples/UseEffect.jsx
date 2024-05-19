@@ -10,22 +10,13 @@ function calcFatorial(numero) {
     return calcFatorial(n - 1) * n
 }
 
-//EX:02
-function verificarValor(valores) {
-    const a = parseInt(valores)
-    const parImpar = a % 2 === 0 ? 'Par' : 'Ímpar'
-    return parImpar
-}
+
 
 const UseEffect = (props) => {
     //EX:01
     const [num, setNum] = useState(1)
     const [fatorial, setFatorial] = useState(1)
-    //EX:02
-    const [numeros, setNumeros] = useState(0)
-    const [valor, setValor] = useState()
-
-
+   
     //EX:01
     useEffect(function () {
         setFatorial(calcFatorial(num))
@@ -38,9 +29,12 @@ const UseEffect = (props) => {
     }, [fatorial])
 
     //EX:02
+const [status, setStatus] = useState("Ímpar")
+
     useEffect(function () {
-        setValor(verificarValor(numeros))
-    }, [numeros])
+        setStatus(num % 2 === 0 ? "Par" : "Ìmpar")
+    }, [num])
+
     return (
         <div className="UseEffect">
             <PageTitle
@@ -64,13 +58,9 @@ const UseEffect = (props) => {
             <div className="center">
                 <div>
                     <span className="text">Valor: </span>
-                    <span className="text red">{valor}</span>
+                    <span className="text red">{status}</span>
                 </div>
-                <input type="number"
-                    className="input"
-                    value={numeros}
-                    onChange={e => setNumeros(e.target.value)}
-                />
+    
             </div>
         </div>
     )
