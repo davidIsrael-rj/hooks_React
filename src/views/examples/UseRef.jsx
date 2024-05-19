@@ -19,11 +19,11 @@ const merge = function (s1, s2) {
     return resultado;
 }
 
-const merge2 = function(s1,s2){
-    return [...s1].map(function(e,i){
-        return `${e}${s2[i] || ""}`
-    }).join("")
-}
+// const merge2 = function(s1,s2){
+//     return [...s1].map(function(e,i){
+//         return `${e}${s2[i] || ""}`
+//     }).join("")
+// }
 
 const UseRef = (props) => {
     const [value1, setValue1] = useState("")
@@ -54,7 +54,7 @@ const UseRef = (props) => {
                     <span className="text">Valor:</span>
                     <span className="text">{merge(value1, value2)} [</span>
                     <span className="text red">{count.current}</span>
-                    <spant className="text">]</spant>
+                    <span className="text">]</span>
                 </div>
                 <input type="text" className="input"
                     ref={myInput1}

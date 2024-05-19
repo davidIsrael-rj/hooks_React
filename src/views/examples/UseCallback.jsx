@@ -20,7 +20,7 @@ const UseCallback = (props) => {
                 subtitle="Retorna uma função memorizada!"
             />
             <div className="center">
-                <spant className="text">{count}</spant>
+                <span className="text">{count}</span>
                 <div>
                     <UseCallbackButtons inc={inc} />
                 </div>
